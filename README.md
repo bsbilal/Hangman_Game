@@ -14,4 +14,4 @@ Play the game by pressing 'new game button' (Words are took from website by JSOU
 
 
 ## Author
-* ** [bsBilal](https://github.com/bsBilal)
+*  [bsBilal](https://github.com/bsBilal)
