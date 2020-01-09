@@ -1,0 +1,8 @@
+word
+application
+black
+gray
+red
+yellow
+banana
+motel

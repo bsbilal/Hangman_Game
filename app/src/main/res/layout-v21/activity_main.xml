@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/Khaki"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+
+
+        android:id="@+id/txtWordToBeGuessed"
+        android:layout_width="397dp"
+        android:textColor="@color/green"
+        android:layout_height="69dp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/Khaki"
+        android:text="Kelime"
+        android:textAlignment="center"
+        android:textSize="40dp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+
+
+    <EditText
+        android:id="@+id/edtInput"
+        android:layout_width="194dp"
+        android:layout_height="82dp"
+        android:background="@color/Khaki"
+        android:ems="10"
+        android:hint="Tahminin"
+        android:inputType="textPersonName"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <TextView
+        android:id="@+id/txtLettersTried"
+        android:background="@color/Khaki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:textSize="20dp"
+        android:text="Kullanılan kelimeler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776" />
+
+    <TextView
+        android:background="@color/Khaki"
+        android:id="@+id/txtTriesLeft"
+        android:textColor="@color/MediumVioletRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X X X X X X X"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+
+    <TextView
+        android:id="@+id/txtWinCount"
+        android:layout_width="399dp"
+        android:layout_height="46dp"
+        android:background="@color/Khaki"
+
+        android:text="Oturumdaki bildiginiz kelime sayısı: 0"
+        android:textColor="@color/green"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="248dp"
+        android:layout_height="63dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ps__button_flat_skype"
+        android:onClick="resetGame"
+        android:text="Yeni Oyun"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.857" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="147dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ps__button_flat_linkedin"
+        android:onClick="btnTry"
+        android:text="Dene"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="30sp"
+        android:translationZ="-1dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/WinAnimation"
+        android:layout_width="412dp"
+        android:layout_height="352dp"
+        android:layout_gravity="center"
+        android:translationZ="35dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="167dp"
+
+        />
+
+    <ImageView
+        android:translationZ="25dp"
+        android:id="@+id/imgViewHang"
+        android:layout_width="266dp"
+        android:layout_height="147dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453"
+        app:srcCompat="@drawable/man5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
